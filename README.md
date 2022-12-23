@@ -1,4 +1,4 @@
-# Tavinhos's Restaurant
+# Tavinho's Restaurant
 
 A new Flutter project.
 

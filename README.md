@@ -17,8 +17,8 @@ samples, guidance on mobile development, and a full API reference.
 
 # Screenshots
 <p align="center">
-<img src="https://user-images.githubusercontent.com/64261696/209405081-266259a8-683b-42de-9452-ee88c414dbef.png" data-canonical-src="https://user-images.githubusercontent.com/64261696/209405081-266259a8-683b-42de-9452-ee88c414dbef.png" width="500" height="1100" />
-<img src="https://user-images.githubusercontent.com/64261696/209405083-74073687-8e25-4226-ae2c-9884cf37dbca.png" data-canonical-src="https://user-images.githubusercontent.com/64261696/209405081-266259a8-683b-42de-9452-ee88c414dbef.png" width="500" height="1100" />
-<img src="https://user-images.githubusercontent.com/64261696/209405110-402ec751-2169-4b58-a296-0b6dd594ba5f.png" data-canonical-src="https://user-images.githubusercontent.com/64261696/209405081-266259a8-683b-42de-9452-ee88c414dbef.png" width="500" height="1100" />
-<img src="https://user-images.githubusercontent.com/64261696/209405116-3fcd6e8a-97be-47d6-a5ee-0adcaa850818.png" data-canonical-src="https://user-images.githubusercontent.com/64261696/209405081-266259a8-683b-42de-9452-ee88c414dbef.png" width="500" height="1100" />
+<img src="https://user-images.githubusercontent.com/64261696/209405081-266259a8-683b-42de-9452-ee88c414dbef.png" data-canonical-src="https://user-images.githubusercontent.com/64261696/209405081-266259a8-683b-42de-9452-ee88c414dbef.png" width="400" height="900" />
+<img src="https://user-images.githubusercontent.com/64261696/209405083-74073687-8e25-4226-ae2c-9884cf37dbca.png" data-canonical-src="https://user-images.githubusercontent.com/64261696/209405081-266259a8-683b-42de-9452-ee88c414dbef.png" width="400" height="900" />
+<img src="https://user-images.githubusercontent.com/64261696/209405110-402ec751-2169-4b58-a296-0b6dd594ba5f.png" data-canonical-src="https://user-images.githubusercontent.com/64261696/209405081-266259a8-683b-42de-9452-ee88c414dbef.png" width="400" height="900" />
+<img src="https://user-images.githubusercontent.com/64261696/209405116-3fcd6e8a-97be-47d6-a5ee-0adcaa850818.png" data-canonical-src="https://user-images.githubusercontent.com/64261696/209405081-266259a8-683b-42de-9452-ee88c414dbef.png" width="400" height="900" />
 </p>

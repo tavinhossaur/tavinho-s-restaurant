@@ -1,6 +1,6 @@
 # Tavinho's Restaurant
 
-A new Flutter project.
+A Flutter project with Material3 Design.
 
 ### Getting Started
 

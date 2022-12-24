@@ -9,7 +9,6 @@ class CardProduto extends StatefulWidget {
   const CardProduto({super.key, required this.produto});
 
   final Produto produto;
-  // final VoidCallback onTap;
 
   @override
   State<CardProduto> createState() => _CardProdutoState();
@@ -55,7 +54,6 @@ class _CardProdutoState extends State<CardProduto> {
         trailing: widget.produto.adicionado
             ? IconButton(
                 onPressed: () {
-                  //widget.onTap();
                   dados.count(false);
                   setState(() {
                     widget.produto.adicionado = false;
@@ -83,7 +81,6 @@ class _CardProdutoState extends State<CardProduto> {
                   ),
                 ),
                 onPressed: () {
-                  //widget.onTap();
                   dados.count(true);
                   setState(() {
                     widget.produto.adicionado = true;

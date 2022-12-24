@@ -21,12 +21,12 @@ class _CardapioState extends State<Cardapio> {
   // Lista de produtos
   final List<Produto> listaProdutos = [
     Produto(
-        nome: 'Pizza Pepperoni',
+        nome: 'Pizza de Pepperoni',
         desc: 'Clássico de pepperoni ao queijo mussarela',
         valor: '19,99',
         imagem: 'pepperoni.png'),
     Produto(
-        nome: 'Pizza havaiana',
+        nome: 'Pizza Havaiana',
         desc: 'Queijo, abacaxi e lombo canadense',
         valor: '24,99',
         imagem: ('havaiana.png')),

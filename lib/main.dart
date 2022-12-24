@@ -15,7 +15,7 @@ class App extends StatelessWidget {
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: "Tavinho's Restaurant",
-          theme: ThemeData(useMaterial3: true),
+          theme: ThemeData.light(useMaterial3: true),
           home: const PaginaInicial()),
     );
   }

@@ -1,10 +1,10 @@
 import 'package:app_compras/interfaces/card_produto.dart';
 import 'package:app_compras/provider/provedor_dados.dart';
 import 'package:app_compras/screens/carrinho_compras.dart';
-import 'package:app_compras/screens/pagina_inicial.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../main.dart';
 import '../models/produto.dart';
 
 // Para retornar as medidas (altura e largura do dispositivo)
@@ -22,7 +22,7 @@ class _CardapioState extends State<Cardapio> {
   final List<Produto> listaProdutos = [
     Produto(
         nome: 'Pizza de Pepperoni',
-        desc: 'Clássico de pepperoni ao queijo mussarela',
+        desc: 'Pepperoni ao queijo mussarela',
         valor: '19,99',
         imagem: 'pepperoni.png'),
     Produto(
@@ -80,10 +80,8 @@ class _CardapioState extends State<Cardapio> {
                     centerTitle: true,
                     leading: IconButton(
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (_) => const PaginaInicial()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (_) => const App()));
                         },
                         icon: const Icon(Icons.home_rounded, size: 30)),
                     title: const Text(

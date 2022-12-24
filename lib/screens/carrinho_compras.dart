@@ -48,13 +48,16 @@ class _CarrinhoComprasState extends State<CarrinhoCompras> {
                               elevation: 24,
                               actions: [
                                 TextButton(
-                                    onPressed: () =>
-                                        Navigator.pop(context, 'Cancelar'),
+                                    onPressed: () => Navigator.of(context,
+                                            rootNavigator: true)
+                                        .pop('dialog'),
                                     child: const Text('Cancelar',
-                                        style:
-                                            TextStyle(color: Colors.indigo))),
+                                        style: TextStyle(
+                                            color: Colors.indigoAccent))),
                                 TextButton(
                                     onPressed: () {
+                                      Navigator.of(context, rootNavigator: true)
+                                          .pop('dialog');
                                       for (var i = 0;
                                           i < widget.listaProdutos.length;
                                           i++) {
@@ -62,19 +65,23 @@ class _CarrinhoComprasState extends State<CarrinhoCompras> {
                                             .any((e) => e.adicionado = false);
                                       }
                                       ScaffoldMessenger.of(context)
-                                          .showSnackBar(const SnackBar(
-                                              duration:
-                                                  Duration(milliseconds: 2000),
-                                              backgroundColor: Colors.indigo,
-                                              content: Text(
-                                                  'Obrigado, seu pedido será entregue em sua mesa.')));
+                                        ..hideCurrentSnackBar()
+                                        ..showSnackBar(const SnackBar(
+                                            duration:
+                                                Duration(milliseconds: 2000),
+                                            backgroundColor: Colors.indigo,
+                                            content: Text(
+                                              'Obrigado, seu pedido será entregue em sua mesa.',
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            )));
                                       widget.listaProdutos.clear();
-                                      Navigator.pop(context, 'Pedir');
                                       setState(() {});
                                     },
                                     child: const Text(
                                       'Pedir',
-                                      style: TextStyle(color: Colors.indigo),
+                                      style:
+                                          TextStyle(color: Colors.indigoAccent),
                                     ))
                               ],
                             ));

@@ -20,9 +20,6 @@ class _CardProdutoState extends State<CardProduto> {
     ProvedorDados dados = Provider.of<ProvedorDados>(context);
 
     return Card(
-      color: widget.produto.adicionado
-          ? const Color.fromARGB(255, 166, 179, 255)
-          : null,
       elevation: 2,
       margin: EdgeInsets.symmetric(horizontal: 10, vertical: mq.height * .008),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
@@ -46,7 +43,7 @@ class _CardProdutoState extends State<CardProduto> {
           style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
         ),
 
-        // Valor do produto
+        // Descrição do produto
         subtitle: Text(widget.produto.desc),
 
         isThreeLine: true,
@@ -58,38 +55,41 @@ class _CardProdutoState extends State<CardProduto> {
                   setState(() {
                     widget.produto.adicionado = false;
                   });
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      duration: const Duration(milliseconds: 800),
-                      backgroundColor: Colors.indigo,
-                      content:
-                          Text('${widget.produto.nome} removido do carrinho')));
+                  ScaffoldMessenger.of(context)
+                    ..hideCurrentSnackBar()
+                    ..showSnackBar(SnackBar(
+                        duration: const Duration(milliseconds: 800),
+                        backgroundColor: Colors.indigo,
+                        content: Text(
+                            '${widget.produto.nome} removido do carrinho')));
                 },
                 icon: const Icon(Icons.check_circle),
                 iconSize: 40,
-                color: Colors.indigo,
+                color: Colors.indigoAccent,
               )
             : ElevatedButton.icon(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.indigo)),
                 icon: const Icon(
                   Icons.add_shopping_cart_rounded,
-                  color: Colors.indigo,
+                  color: Colors.white,
                 ),
                 label: Text(
                   'R\$${widget.produto.valor}',
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: Colors.indigo,
-                  ),
+                  style: const TextStyle(fontSize: 12, color: Colors.white),
                 ),
                 onPressed: () {
                   dados.count(true);
                   setState(() {
                     widget.produto.adicionado = true;
                   });
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      duration: const Duration(milliseconds: 800),
-                      backgroundColor: Colors.indigo,
-                      content: Text(
-                          '${widget.produto.nome} adicionado ao carrinho')));
+                  ScaffoldMessenger.of(context)
+                    ..hideCurrentSnackBar()
+                    ..showSnackBar(SnackBar(
+                        duration: const Duration(milliseconds: 800),
+                        backgroundColor: Colors.indigo,
+                        content: Text(
+                            '${widget.produto.nome} adicionado ao carrinho')));
                 },
               ),
       ),
